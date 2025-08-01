@@ -28,7 +28,7 @@
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from utils import process_image
+from app.utils import process_image  # ✅ certo
 import tempfile
 import os
 
