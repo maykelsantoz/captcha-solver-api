@@ -1,7 +1,9 @@
 FROM python:3.9-slim
 
-# Instala o Tesseract e libs de imagem
-RUN apt-get update &&     apt-get install -y tesseract-ocr libglib2.0-0 libsm6 libxrender1 libxext6 &&     apt-get clean && rm -rf /var/lib/apt/lists/*
+# Instala o Tesseract, libs de imagem e o libGL para OpenCV funcionar
+RUN apt-get update && \
+    apt-get install -y tesseract-ocr libglib2.0-0 libsm6 libxrender1 libxext6 libgl1-mesa-glx && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Cria diretório de trabalho
 WORKDIR /app
