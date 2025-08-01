@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: captcha-solver-api
-    env: node
-    buildCommand: cd captcha-solver && npm install
-    startCommand: cd captcha-solver && npm start
-    branch: main
