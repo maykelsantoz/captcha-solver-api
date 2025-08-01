@@ -6,10 +6,12 @@ import os
 
 app = FastAPI()
 
-# CORS para permitir requisições da extensão
+# CORS para permitir requisições APENAS do sistec
+origins = ["https://sistec.mec.gov.br"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,           # Não pode ser ["*"] se allow_credentials=True
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
