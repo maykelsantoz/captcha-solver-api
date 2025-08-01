@@ -1,4 +1,0 @@
-services:
-  - type: web
-    name: captcha-solver-api
-    env: docker
