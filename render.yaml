@@ -1,6 +1,7 @@
 services:
   - type: web
     name: captcha-solver-api
+    env: docker
     runtime: python
     buildCommand: |
       apt-get update && \
